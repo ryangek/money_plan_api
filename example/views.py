@@ -1,16 +1,17 @@
 # example/views.py
 from datetime import datetime
+from django.http import JsonResponse
 
-from django.http import HttpResponse
-
-def index(request):
-    now = datetime.now()
-    html = f'''
-    <html>
-        <body>
-            <h1>Hello from Vercel!</h1>
-            <p>The current time is { now }.</p>
-        </body>
-    </html>
-    '''
-    return HttpResponse(html)
+def apple_app_site_association(request):
+    response_data = {
+        "applinks": {
+            "apps": [],
+            "details": [
+                {
+                    "appID": "TEAM_ID.com.example.moneyPlanFlutter",
+                    "paths": [ "/auth" ]
+                }
+            ]
+        }
+    }
+    return JsonResponse(response_data)

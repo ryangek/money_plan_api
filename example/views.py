@@ -8,7 +8,7 @@ def apple_app_site_association(request):
             "apps": [],
             "details": [
                 {
-                    "appID": "TEAM_ID.com.example.moneyPlanFlutter",
+                    "appID": "TEAM_ID.com.ryangek.moneyPlan",
                     "paths": [ "/auth" ]
                 }
             ]
